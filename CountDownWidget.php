@@ -9,7 +9,7 @@
  * @package  quexer69/yii-countdown
  * @author   Christopher Stebe <cstebe@iserv4u.com>
  * @license  http://opensource.org/licenses/MIT MIT
- * @version  0.2.0
+ * @version  0.3.0
  * @link     https://github.com/Quexer69/yii-countdown github repository
  *
  */
@@ -32,18 +32,16 @@ class CountDownWidget extends CWidget
 
     public $finished_html = 'finished message (html)';
 
-    public $follow = null;
-
     public $container_class = null;
 
-    public $total_seconds = 0;
+    private $total_seconds;
 
     /**
      * This method provide unique id for each countdown
      *
      * @return string
      */
-    public function getUniqueId()
+    public static function getUniqueId()
     {
 
         return md5(++self::$unique);
@@ -57,9 +55,9 @@ class CountDownWidget extends CWidget
     {
         $start               = time();
         $end                 = mktime(
-            $this->seconds,
-            $this->minutes,
             $this->hour,
+            $this->minutes,
+            $this->seconds,
             $this->month,
             $this->day,
             $this->year
@@ -120,7 +118,9 @@ class CountDownWidget extends CWidget
         $this->render(
             'template',
             array(
-                'this' => $this
+                'class'         => $this->container_class,
+                'total_seconds' => $this->total_seconds,
+
             )
         );
     }

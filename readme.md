@@ -1,7 +1,7 @@
 Yii Countdown Timer Widget
 ===
 
-Version 0.20.
+Version 0.3.0
 
 ## Requirements
 
