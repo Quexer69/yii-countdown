@@ -34,8 +34,6 @@ class CountDownWidget extends CWidget
 
     public $follow = null;
 
-    public $up = false;
-
     public $container_class = null;
 
     public $total_seconds = 0;
