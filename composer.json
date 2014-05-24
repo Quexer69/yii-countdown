@@ -1,0 +1,15 @@
+{
+    "name": "quexer69/yii-countdown",
+    "description": "yii countdown widget",
+    "require": {
+        "squizlabs/php_codesniffer": "1.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Quexer69",
+            "email": "cstebe@iserv4u.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
