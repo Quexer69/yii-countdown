@@ -9,7 +9,7 @@
  * @package  quexer69/yii-countdown
  * @author   Christopher Stebe <cstebe@iserv4u.com>
  * @license  http://opensource.org/licenses/MIT MIT
- * @version  0.1.1
+ * @version  0.2.0
  * @link     https://github.com/Quexer69/yii-countdown github repository
  *
  */
