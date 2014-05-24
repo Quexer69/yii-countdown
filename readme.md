@@ -1,3 +1,8 @@
+Yii Countdown Timer Widget
+===
+
+Version 0.1.0
+
 ## Requirements
 
 Yii 1.1 or above, PHP >= 5
