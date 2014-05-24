@@ -9,7 +9,7 @@
  * @package  quexer69/yii-countdown
  * @author   Christopher Stebe <cstebe@iserv4u.com>
  * @license  http://opensource.org/licenses/MIT MIT
- * @version  0.1.0
+ * @version  0.1.1
  * @link     https://github.com/Quexer69/yii-countdown github repository
  *
  */
@@ -78,22 +78,22 @@ class CountDownWidget extends CWidget
 
                 $(this).attr(\'value\',value);
 
-                secondi = value;
-                _secondi = secondi % 60;
-                _minuti = ((secondi - _secondi) / 60) % 60;
-                _ore = (secondi - _secondi - _minuti * 60) / 3600;
-                _days = _ore / 24;
-                _ore = _ore % 24;
-                _ore = _ore < 10 ? "0"+_ore : _ore;
-                _minuti = _minuti < 10 ?  "0" + _minuti : _minuti;
+                seconds = value;
+                _seconds = seconds % 60;
+                _minutes = ((seconds - _seconds) / 60) % 60;
+                _hours = (seconds - _seconds - _minutes * 60) / 3600;
+                _days = _hours / 24;
+                _hours = _hours % 24;
+                _hours = _hours < 10 ? "0"+_hours : _hours;
+                _minutes = _minutes < 10 ?  "0" + _minutes : _minutes;
 
-                _secondi = _secondi < 10 ? "0" + _secondi  : _secondi;
-                _secondi = (_secondi == null) ? "<strong>" + _secondi + "</strong> Sekunden ": "";
+                _seconds = _seconds < 10 ? "0" + _seconds  : _seconds;
+                _seconds = (_seconds == null) ? "<strong>" + _seconds + "</strong> Sekunden ": "";
 
                 var html_output = "<strong>" + parseInt(_days) + "</strong> Tage "
-                                + "<strong>" + _ore + "</strong> Stunden "
-                                + "<strong>" + _minuti + "</strong> Minuten "
-                                + _secondi;
+                                + "<strong>" + _hours + "</strong> Stunden "
+                                + "<strong>" + _minutes + "</strong> Minuten "
+                                + _seconds;
 
                 $("#"+$(this).attr("rel")).html(html_output);
 
