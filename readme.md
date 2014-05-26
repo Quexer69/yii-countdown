@@ -12,10 +12,8 @@ Yii 1.1 or above, PHP >= 5
 To install this widget
 -Download this package or get it via composer.
 
-        'components'=>array(
-                'countdown' => array(
-                        'class'=>'vendor.quexer69.yii-countdown.CountDownWidget'
-                ),
+        'import'=>array(
+                'vendor.quexer69.yii-countdown.CountDownWidget'
         ),
 
 ## Usage
